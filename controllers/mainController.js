@@ -7,23 +7,34 @@ mainApp.controller('mainController',
                     $scope.currentstate = toState.name;
                 });
 
-            $rootScope.stateObj = productServices.loadInitState();
-            $rootScope.settingObj = productServices.loadProducts();
-            $scope.stateObj = $rootScope.stateObj;
-            $scope.settingObj = $rootScope.settingObj;
+
+
 
             var promise = commonServices.getCustomConfig();
 
             promise.then(
-                function(payload) {
-                    console.debug(payload.data.tabs);
+                function (payload) {
+                    //console.debug(payload.data.tabs);
                     $rootScope.customFormTabs = payload.data.tabs;
                 }
             )
-            
-            
- 
-            
+
+            var p = productServices.loadProducts();
+            //console.debug('x');
+            p.then(
+                function (payload) {
+                    $rootScope.settingObj = payload.data;
+                    console.debug(payload);
+                    $scope.settingObj = $rootScope.settingObj;
+                }
+            )
+
+            $rootScope.stateObj = productServices.loadInitState();
+            $scope.stateObj = $rootScope.stateObj;
+
+
+
 
 
         }]);
+
