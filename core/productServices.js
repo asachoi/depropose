@@ -1,11 +1,13 @@
+
+
 mainApp.service('productServices', function ($http, $rootScope, $filter, $q) {
     this.getProductGroupList = function () {
-        return $rootScope.settingObj.products;
+        return $rootScope.settingObj.productgroups;
     }
 
     this.getProductGroup = function (productgroupid) {
         // alert($rootScope.settingObj.products);
-        return $filter('filter')($rootScope.settingObj.products, { productid: productgroupid })[0];
+        return $filter('filter')($rootScope.settingObj.productgroups, { productgroupname: productgroupid })[0];
     }
 
 
@@ -14,7 +16,7 @@ mainApp.service('productServices', function ($http, $rootScope, $filter, $q) {
         var productgroup = this.getProductGroup(productgroupid);
         var productid = planid.split('.')[0];
 
-        return $filter('filter')(productgroup.plantypes, { plantype: productid })[0];
+        return $filter('filter')(productgroup.products, { productcode: productid })[0];
     }
 
     this.getProductName = function (productgroupid) {
@@ -30,9 +32,9 @@ mainApp.service('productServices', function ($http, $rootScope, $filter, $q) {
         if (p == null) return;
 
         var plans = [];
-        for (i = 0; i < p.plantypes.length; i++) {
+        for (i = 0; i < p.products.length; i++) {
 
-            var pt = p.plantypes[i];
+            var pt = p.products[i];
 
             for (j = 0; j < pt.plans.length; j++) {
                 var ptt = pt.plans[j];
@@ -53,7 +55,7 @@ mainApp.service('productServices', function ($http, $rootScope, $filter, $q) {
 
 
     this.loadProducts = function () { 
-        return $http.get("customizations/data/oldproduct.txt?cb=erwrqew");
+        return $http.get("customizations/data/product.json?cb=erwrqew");
     };
  
     this.loadInitState = function () {

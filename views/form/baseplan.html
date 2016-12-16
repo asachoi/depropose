@@ -16,8 +16,8 @@
                         <md-input-container class="md-block" flex=20>
                             <label>Product</label>
                             <md-select name="productid" ng-model="baseObj.product.productid">
-                                <md-option ng-repeat="n in getProductGroupList();" ng-value="n.productid">
-                                    {{n.productid}}
+                                <md-option ng-repeat="n in getProductGroupList();" ng-value="n.productgroupname">
+                                    {{n.productgroupname}}
                                 </md-option>
                             </md-select>
                         </md-input-container>
