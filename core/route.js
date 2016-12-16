@@ -26,7 +26,7 @@ mainApp.config(function ($stateProvider, $urlRouterProvider) {
                 $scope.customFormTabs = $rootScope.customFormTabs;
 
                 $scope.setDisable = function (section) {
- 
+
                     return true;
                 }
             }
@@ -69,10 +69,12 @@ mainApp.config(function ($stateProvider, $urlRouterProvider) {
                     }
 
                     $scope.changePlan = function () {
-                        if($scope.baseObj.product.planid==null) return;
+                        if ($scope.baseObj.product.planid == null) return;
 
                         $scope.selectedPlan = productServices.getPlan($scope.baseObj.product.productid, $scope.baseObj.product.planid);
-                        $scope.selectedPlanType = productServices.getProduct($scope.baseObj.product.productid, $scope.baseObj.product.planid);
+                        $rootScope.selectedPlan = $scope.selectedPlan;
+                        $scope.selectedProduct = productServices.getProduct($scope.baseObj.product.productid, $scope.baseObj.product.planid);
+                        $rootScope.selectedProduct = $scope.selectedProduct;
                     }
 
                     $scope.getBaseProductPlans = function (productid) {
@@ -85,17 +87,64 @@ mainApp.config(function ($stateProvider, $urlRouterProvider) {
             url: '/rider',
             cache: false,
             templateUrl: 'views/form/rider.html?cb=' + cachebuster,
-            controller: function ($scope, $rootScope, $filter, $state) {
+            controller: function ($scope, $rootScope, $filter, $state, productServices) {
                 $scope.current = $state.current;
                 $scope.baseObj = $rootScope.stateObj;
                 $scope.settingObj = $rootScope.settingObj;
+                $scope.selectedRiders = [];
 
-                $scope.getRiderList = function (productid, planid) {
-                    if (productid == null || planid == null) return;
-                    var p = $filter('filter')($scope.settingObj.products, { productid: productid });
-                    var rs = $filter('filter')(p[0].plans, { planid: planid });
+                $scope.getRiderObject = function(ridercode) {
+                     return $filter('filter')($scope.baseObj.riders, { ridercode: ridercode })[0];
+                }
+
+                $scope.setRiderList = function () {
+                    if ($rootScope.selectedPlan == null) return;
+                    var rs = $rootScope.selectedPlan.riders;
+                    var riders = [];
+
+                    rs.forEach(
+                        function (item, index) {
+                    //console.debug(item);
+                            riders.push(
+                                {
+                                    ridercode: item,
+                                    selected: false
+                                }
+                            )
+                        }
+                    );
+                    return riders;
+
+                }
+
+                $scope.getRiderList = function () {
+                    if ($rootScope.selectedPlan == null) return;
+                    var rs = $rootScope.selectedPlan.riders;
                     return rs;
                 }
+
+                $scope.getRiderSetting = function (ridercode) {
+                    return productServices.getRiderSetting(ridercode);
+                }
+
+                $scope.toggle = function (item, list) {
+
+                    var idx = list.indexOf(item);
+                    if (idx > -1) { // remove
+                        list.splice(idx, 1);
+                        $scope.getRiderObject(item).selected=false;
+                    }
+                    else {  //add
+                        list.push(item);
+                        $scope.getRiderObject(item).selected=true;
+                    }
+                };
+
+                $scope.exists = function (item, list) {
+                    if (list == null) return;
+
+                    return list.indexOf(item) > -1;
+                };
 
             }
         })
@@ -108,7 +157,7 @@ mainApp.config(function ($stateProvider, $urlRouterProvider) {
                 $scope.baseObj = $rootScope.stateObj;
                 $scope.settingObj = $rootScope.settingObj;
             }
-        })                
+        })
         ;
 
 

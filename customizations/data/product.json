@@ -14,7 +14,15 @@
                             "payperiod": "5",
                             "minifaceamount": 200000,
                             "maxfaceamount": 999999999,
-                            "currency": "PHP"
+                            "currency": "PHP",
+                            "riders": [
+                                "AE885",
+                                "WE885",
+                                "PE885",
+                                "HE120",
+                                "HE220",
+                                "CE320"
+                            ]
                         },
                         {
                             "planname": "MCBLLegacyProtect100Prime5-Pay(Peso)",
@@ -22,7 +30,15 @@
                             "payperiod": "5",
                             "minifaceamount": 100000,
                             "maxfaceamount": 999999999,
-                            "currency": "PHP"
+                            "currency": "PHP",
+                            "riders": [
+                                "AE885",
+                                "WE885",
+                                "PE885",
+                                "HE120",
+                                "HE220",
+                                "CE320"
+                            ]
                         },
                         {
                             "planname": "MCBLLegacyProtect100GoldPackageA5-Pay(Peso)",
@@ -30,7 +46,15 @@
                             "payperiod": "5",
                             "minifaceamount": 100000,
                             "maxfaceamount": 999999999,
-                            "currency": "PHP"
+                            "currency": "PHP",
+                            "riders": [
+                                "AE885",
+                                "WE885",
+                                "PE885",
+                                "HE120",
+                                "HE220",
+                                "CE320"
+                            ]
                         },
                         {
                             "planname": "MCBLLegacyProtect100GoldPackageB5-Pay(Peso)",
@@ -38,7 +62,15 @@
                             "payperiod": "5",
                             "minifaceamount": 100000,
                             "maxfaceamount": 999999999,
-                            "currency": "PHP"
+                            "currency": "PHP",
+                            "riders": [
+                                "AE885",
+                                "WE885",
+                                "PE885",
+                                "HE120",
+                                "HE220",
+                                "CE320"
+                            ]
                         },
                         {
                             "planname": "MCBLLegacyProtect10010-Pay(Peso)",
@@ -46,7 +78,14 @@
                             "payperiod": "10",
                             "minifaceamount": 200000,
                             "maxfaceamount": 999999999,
-                            "currency": "PHP"
+                            "currency": "PHP",
+                            "riders": [
+                                "AJ885",
+                                "WJ885",
+                                "PJ885",
+                                "HJ165",
+                                "CJ385"
+                            ]
                         },
                         {
                             "planname": "MCBLLegacyProtect100Prime10-Pay(Peso)",
@@ -54,7 +93,14 @@
                             "payperiod": "10",
                             "minifaceamount": 100000,
                             "maxfaceamount": 999999999,
-                            "currency": "PHP"
+                            "currency": "PHP",
+                            "riders": [
+                                "AJ885",
+                                "WJ885",
+                                "PJ885",
+                                "HJ165",
+                                "CJ385"
+                            ]
                         },
                         {
                             "planname": "MCBLLegacyProtect100GoldPackageA10-Pay(Peso)",
@@ -62,7 +108,14 @@
                             "payperiod": "10",
                             "minifaceamount": 100000,
                             "maxfaceamount": 999999999,
-                            "currency": "PHP"
+                            "currency": "PHP",
+                            "riders": [
+                                "AJ885",
+                                "WJ885",
+                                "PJ885",
+                                "HJ165",
+                                "CJ385"
+                            ]
                         },
                         {
                             "planname": "MCBLLegacyProtect100GoldPackageB10-Pay(Peso)",
@@ -70,7 +123,14 @@
                             "payperiod": "10",
                             "minifaceamount": 100000,
                             "maxfaceamount": 999999999,
-                            "currency": "PHP"
+                            "currency": "PHP",
+                            "riders": [
+                                "AJ885",
+                                "WJ885",
+                                "PJ885",
+                                "HJ165",
+                                "CJ385"
+                            ]
                         },
                         {
                             "planname": "MCBLLegacyProtect10015-Pay(Peso)",
@@ -78,7 +138,15 @@
                             "payperiod": "15",
                             "minifaceamount": 200000,
                             "maxfaceamount": 999999999,
-                            "currency": "PHP"
+                            "currency": "PHP",
+                            "riders": [
+                                "AO885",
+                                "WO885",
+                                "PO885",
+                                "HO165 ",
+                                "HO265",
+                                "CO385"
+                            ]
                         },
                         {
                             "planname": "MCBLLegacyProtect100Prime15-Pay(Peso)",
@@ -86,7 +154,15 @@
                             "payperiod": "15",
                             "minifaceamount": 100000,
                             "maxfaceamount": 999999999,
-                            "currency": "PHP"
+                            "currency": "PHP",
+                            "riders": [
+                                "AO885",
+                                "WO885",
+                                "PO885",
+                                "HO165 ",
+                                "HO265",
+                                "CO385"
+                            ]
                         },
                         {
                             "planname": "MCBLLegacyProtect100GoldPackageA15-Pay(Peso)",
@@ -94,7 +170,15 @@
                             "payperiod": "15",
                             "minifaceamount": 100000,
                             "maxfaceamount": 999999999,
-                            "currency": "PHP"
+                            "currency": "PHP",
+                            "riders": [
+                                "AO885",
+                                "WO885",
+                                "PO885",
+                                "HO165 ",
+                                "HO265",
+                                "CO385"
+                            ]
                         },
                         {
                             "planname": "MCBLLegacyProtect100GoldPackageB15-Pay(Peso)",
@@ -102,7 +186,15 @@
                             "payperiod": "15",
                             "minifaceamount": 100000,
                             "maxfaceamount": 999999999,
-                            "currency": "PHP"
+                            "currency": "PHP",
+                            "riders": [
+                                "AO885",
+                                "WO885",
+                                "PO885",
+                                "HO165 ",
+                                "HO265",
+                                "CO385"
+                            ]
                         },
                         {
                             "planname": "MCBLLegacyProtect100Reg-Pay(Peso)",
@@ -110,7 +202,14 @@
                             "payperiod": "RegularPay",
                             "minifaceamount": 300000,
                             "maxfaceamount": 999999999,
-                            "currency": "PHP"
+                            "currency": "PHP",
+                            "riders": [
+                                "AZ099",
+                                "WZ885",
+                                "PZ885",
+                                "HE065",
+                                "CZ385"
+                            ]
                         },
                         {
                             "planname": "MCBLLegacyProtect100PrimeReg-Pay(Peso)",
@@ -118,7 +217,14 @@
                             "payperiod": "RegularPay",
                             "minifaceamount": 200000,
                             "maxfaceamount": 999999999,
-                            "currency": "PHP"
+                            "currency": "PHP",
+                            "riders": [
+                                "AZ099",
+                                "WZ885",
+                                "PZ885",
+                                "HE065",
+                                "CZ385"
+                            ]                            
                         },
                         {
                             "planname": "MCBLLegacyProtect100GoldPackageAReg-Pay(Peso)",
@@ -126,7 +232,14 @@
                             "payperiod": "RegularPay",
                             "minifaceamount": 200000,
                             "maxfaceamount": 999999999,
-                            "currency": "PHP"
+                            "currency": "PHP",
+                            "riders": [
+                                "AZ099",
+                                "WZ885",
+                                "PZ885",
+                                "HE065",
+                                "CZ385"
+                            ]                
                         },
                         {
                             "planname": "MCBLLegacyProtect100GoldPackageBReg-Pay(Peso)",
@@ -134,7 +247,14 @@
                             "payperiod": "RegularPay",
                             "minifaceamount": 200000,
                             "maxfaceamount": 999999999,
-                            "currency": "PHP"
+                            "currency": "PHP",
+                            "riders": [
+                                "AZ099",
+                                "WZ885",
+                                "PZ885",
+                                "HE065",
+                                "CZ385"
+                            ]                
                         }
                     ]
                 }

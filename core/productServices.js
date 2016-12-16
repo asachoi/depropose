@@ -53,10 +53,21 @@ mainApp.service('productServices', function ($http, $rootScope, $filter, $q) {
         return $filter('filter')(product.plans, { planid: pid })[0];
     }
 
+    this.getRiderSetting = function (ridercode) {
+        if(ridercode==null) return;
+
+        return $filter('filter')($rootScope.settingObj.riders, { ridercode: ridercode })[0];
+    }
+
 
     this.loadProducts = function () { 
         return $http.get("customizations/data/product.json?cb=erwrqew");
     };
+
+    this.loadRiders = function () { 
+        return $http.get("customizations/data/rider.json?cb=erwrqew");
+    };
+
  
     this.loadInitState = function () {
         var data = {
@@ -86,6 +97,8 @@ mainApp.service('productServices', function ($http, $rootScope, $filter, $q) {
             }
             ,
             riders: [
+            ],
+            riderChoices: [                
             ]
         };
         return data;
