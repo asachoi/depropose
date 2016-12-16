@@ -1,0 +1,12 @@
+<md-content  class="md-padding">
+    <!--panel session //-->
+    <customer-section data="baseObj.customers[0]"></customer-section>
+    <product-section data="baseObj.product"></product-section>
+
+    
+ 
+    <!--form //-->
+    <div data-ng-repeat="r in baseObj.riders">              
+        <input ng-model="r.faceamount">
+    </div>
+</md-content>

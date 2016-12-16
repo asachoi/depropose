@@ -1,0 +1,64 @@
+<md-button ui-sref="form.customer">Create Proposal</md-button>
+<md-content class="md-padding" style="background-color:EEE" flex="auto" layout="row">
+    <w3TestDirective ng-model="stateObj"></w3TestDirective>
+     
+    <div flex-gt-sm="50" flex class="md-padding">
+        <md-toolbar layout="row">
+            <div class="md-toolbar-tools">
+                <span>{{'CUSTOMER' | translate}}</span>
+            </div>
+        </md-toolbar>
+        <md-content ng-init="cList=[{firstname:'asa choi'}]">
+            <md-list flex ng-repeat="item in cList  | filter: {$:searchKey}"
+            >
+                <md-list-item class="md-3-line" ng-click="gotoProposal();">
+                    <div class="md-list-item-text" layout="column">
+                        {{item.firstname}}{{item.given}}
+                        <p> {{ item.phone }}</p>
+                    </div>
+                </md-list-item>
+                <md-divider></md-divider>
+            </md-list>
+        </md-content>
+    </div>
+    <div flex-gt-sm="50" flex class="md-padding">
+        <md-toolbar layout="row">
+            <div class="md-toolbar-tools">
+                <span>{{'Pending' | translate}}</span>
+            </div>
+        </md-toolbar>
+        <md-content>
+            <md-list flex ng-repeat="item in pList  | filter: {status:'pending', $:searchKey}">
+
+                <md-list-item class="md-3-line" ng-click="gotoProposal();">
+                    <div class="md-list-item-text" layout="column">
+                        {{ item.pID }}
+                        <p> {{item.name}} | {{ item.plan }}</p>
+
+                    </div>
+                </md-list-item>
+                <md-divider></md-divider>
+            </md-list>
+        </md-content>
+    </div>
+    <div flex-gt-sm="50" flex class="md-padding">
+        <md-toolbar layout="row">
+            <div class="md-toolbar-tools">
+                <span>Moved to POS</span>
+            </div>
+        </md-toolbar>
+        <md-content>
+            <md-list flex ng-repeat="item in pList  | filter: {status:'completed', $:searchKey}">
+
+                <md-list-item class="md-3-line" ng-click="gotoProposal();">
+
+                    <div class="md-list-item-text" layout="column">
+                        {{ item.pID }}
+                        <p> {{item.name}} | {{ item.plan }}</p>
+                    </div>
+                </md-list-item>
+                <md-divider></md-divider>
+            </md-list>
+        </md-content>
+    </div>
+</md-content>

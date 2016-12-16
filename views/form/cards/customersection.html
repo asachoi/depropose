@@ -1,0 +1,17 @@
+<section>
+    <md-card>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">{{'customerinfo' | translate }}</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+            <div layout="row">
+                <div flex>{{'name' | translate }}:{{data.surname}} {{data.given}}</div>
+                <div flex>{{'gender' | translate }}: {{data.gender}}</div>
+                <div flex>{{'age' | translate }}: {{ data.dob | Age }}</div>
+                <div flex>{{'smoker' | translate }}: {{ data.smoking | YesNo}}</div>
+            </div>
+        </md-card-content>
+    </md-card>
+</section>

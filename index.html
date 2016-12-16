@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+  <link rel="icon" href="data:;base64,=">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body ng-app="mainApp" ng-cloak ng-controller="mainController" >
+  <md-content>
+    <md-toolbar class="md-small-tall">
+      <div class="md-toolbar-tools" layout="row" layout-wrap>
+        <div flex="none">
+          <a ui-sref="list"> <i class="material-icons">home</i></a>
+        </div>
+        <div flex>
+          {{'CUSTOMER' | translate}} {{'LIST' || translate}}
+        </div>
+        <div flex="nogrow" ng-show="saveButton=='true'">
+          <md-button class="md-raised md-primary" ng-click="saveState(title);">
+            <i class="material-icons" style="vertical-align: middle;display: inline-flex;">save</i>
+          </md-button>
+        </div>
+      </div>
+    </md-toolbar>
+
+
+    <md-content class="container">
+      <md-content ui-view></md-content>
+    </md-content>
+
+    <footer>
+      <div layout="row" layout-align="center center">
+        {{stateObj}}
+      </div>
+    </footer>
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="assets/libs/angular-1.5.9/angular.min.js"></script>
+    <script src="assets/libs/angular-1.5.9/angular-animate.min.js"></script>
+    <script src="assets/libs/angular-1.5.9/angular-aria.min.js"></script>
+    <script src="assets/libs/angular-1.5.9/angular-messages.min.js"></script>
+    <script src="assets/libs/angular-1.5.9/angular-sanitize.js"></script>
+    <script src="assets/libs/angular-material.min.js"></script>
+    <script src="assets/libs/angular-ui-router.min.js"></script>
+    <script src="assets/libs/angular-translate.min.js"></script>
+    <script src="assets/libs/ngStorage.js"></script>
+
+    <script type="text/javascript">
+        var cachebuster = Math.round(new Date().getTime() / 1000);
+        document.write('<scr'+'ipt type="text/javascript" src="core/static.js?cb=' +cachebuster+'"></scr' + 'ipt>');
+        document.write('<scr'+'ipt type="text/javascript" src="core/app.js?cb=' +cachebuster+'"></scr' + 'ipt>');
+        document.write('<scr'+'ipt type="text/javascript" src="core/filters.js?cb=' +cachebuster+'"></scr' + 'ipt>');
+       
+        document.write('<scr'+'ipt type="text/javascript" src="core/route.js?cb=' +cachebuster+'"></scr' + 'ipt>');
+        document.write('<scr'+'ipt type="text/javascript" src="core/directives.js?cb=' +cachebuster+'"></scr' + 'ipt>');
+        document.write('<scr'+'ipt type="text/javascript" src="core/productServices.js?cb=' +cachebuster+'"></scr' + 'ipt>');
+        document.write('<scr'+'ipt type="text/javascript" src="core/commonServices.js?cb=' +cachebuster+'"></scr' + 'ipt>');
+
+        document.write('<scr'+'ipt type="text/javascript" src="controllers/mainController.js?cb=' +cachebuster+'"></scr' + 'ipt>');         
+        document.write('<scr'+'ipt type="text/javascript" src="controllers/listController.js?cb=' +cachebuster+'"></scr' + 'ipt>');
+
+        document.write('<scr'+'ipt type="text/javascript" src="customizations/translate.js?cb=' +cachebuster+'"></scr' + 'ipt>');
+        document.write('<scr'+'ipt type="text/javascript" src="customizations/route.js?cb=' +cachebuster+'"></scr' + 'ipt>');        
+    </script>
+
+  </md-content>
+  
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<md-content class="md-padding">
+    <!--panel session //-->
+    
+    <customer-section data="baseObj.customers[0]"></customer-section>
+    <!--form //-->
+    <form name="productForm" ng-keyup="" ng-mouseup="" ng-init="changePlan();">
+        <section>
+            <md-card>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">{{'planinfo' | translate}}</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                    <div layout-gt-xs="row">
+                        <md-input-container class="md-block" flex=20>
+                            <label>Product</label>
+                            <md-select name="productid" ng-model="baseObj.product.productid">
+                                <md-option ng-repeat="n in getProductGroupList();" ng-value="n.productid">
+                                    {{n.productid}}
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex=80> <label>Plan</label>
+                            <md-select name="planid" ng-model="baseObj.product.planid" ng-change="changePlan();">
+                                <md-option ng-repeat="n in getBaseProductPlans(baseObj.product.productid)" ng-value="n.plantype + '.' + n.planid">
+                                    {{n.planname}}
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                    </div>
+                    <!--demo//-->
+                    <div layout-gt-xs="row">
+                        <md-input-container class="md-block">
+                            <md-select name="currency" ng-model="baseObj.product.currency" ng-init="baseObj.product.currency=selectedPlan.currency;"
+                                ng-disabled="true">
+                                <md-option ng-value="selectedPlan.currency">{{selectedPlan.currency}}</md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-xs>
+                            <label>{{'premium'|translate}}</label>
+                            <input ng-model="baseObj.product.annualpremium">
+                            </md-input>
+                        </md-input-container>
+                    </div>
+                    <div layout-gt-xs="row" ng-if="selectedPlanType.customform" ng-include="'customizations/baseplan/' + selectedPlanType.customform + '.html?bb=1'">
+                    </div>
+                  <!--demo//-->
+                </md-card-content>
+            </md-card>
+        </section>
+    </form>
+</md-content>

@@ -1,0 +1,24 @@
+<md-slider-container flex=30>
+    <p flex=100>
+        {{'multiplier'|translate}}
+    </p>
+    <md-slider flex min="{{selectedPlan.famultipliermin}}" max="{{selectedPlan.famultipliermax}}" ng-model="baseObj.product.famultiplier"
+        aria-label="red" id="famultiplier">
+    </md-slider>
+    <span>{{baseObj.product.famultiplier}}</span>
+</md-slider-container>
+
+<md-input-container class="md-block" flex=40>
+    <label>{{'faceamount'|translate}}</label>
+    <input ng-model="baseObj.product.faceamount" ng-value="baseObj.product.annualpremium * baseObj.product.famultiplier" type="number"
+        disabled>
+    </md-input>
+</md-input-container>
+
+<md-input-container class="md-block" flex=30>
+    <label>{{'deathbenefit'|translate}}</label>
+    <md-select name="currency" ng-model="baseObj.product.deathbenefit" ng-init="baseObj.product.deathbenefit=selectedPlan.deathbenefit"
+        ng-disabled="true">
+        <md-option ng-value="selectedPlan.deathbenefit">{{selectedPlan.deathbenefit}}</md-option>
+    </md-select>
+</md-input-container>

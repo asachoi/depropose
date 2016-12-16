@@ -1,0 +1,10 @@
+<md-content class="md-padding">
+    <form name="userForm" ng-keyup="" ng-mouseup="">
+        <customer-input data="baseObj.customers.insured" title="'Insured'"></customer-input>
+            <md-checkbox ng-model="baseObj.settings.isSamePerson" aria-label="" >
+                Policy holder is same as insured 
+            </md-checkbox>         
+        <customer-input data="baseObj.customers.policyholder" title="'Policy Holder'" ng-if="!baseObj.settings.isSamePerson"></customer-input>        
+
+    </form>
+</md-content>

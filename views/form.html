@@ -1,0 +1,21 @@
+<md-content class="md-padding">
+  <md-nav-bar md-selected-nav-item="currentstate" nav-bar-aria-label="navigation links">
+    <md-nav-item md-nav-click="" name="form.customer" ui-sref=".customer">{{'customer'|translate}}</md-nav-item>
+    <md-nav-item md-nav-click="" name="form.baseplan" ui-sref=".baseplan" ng-disabled="setDisable('baseplan')">{{'baseplan'|translate}}</md-nav-item>
+    <md-nav-item md-nav-click="" name="form.rider" ui-sref=".rider" ng-disabled="setDisable('rider')">{{'rider'|translate}}</md-nav-item>
+    <md-nav-item md-nav-click="" name="form.summary" ui-sref=".summary" ng-disabled="setDisable('summary')">{{'summary'|translate}}</md-nav-item>    
+    
+    <md-nav-item md-nav-click="" ng-repeat="tab in customFormTabs" name="form.{{tab}}" ui-sref=".{{tab}}" ng-disabled="setDisable(tab)">{{tab|translate}}</md-nav-item>
+    
+  </md-nav-bar>
+  <div class="container">
+    <div ui-view></div>
+  </div>
+
+  <div layout="row" layout-align="end center">
+    <md-button class="md-raised md-primary" ng-click="saveState(title);">
+      {{'next' | translate}}
+    </md-button>
+  </div>
+
+</md-content>

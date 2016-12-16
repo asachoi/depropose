@@ -1,0 +1,76 @@
+<section ng-if="!baseObj.settings.isSamePerson || data.role=='insurer'">
+    <md-card>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">{{data.role}}</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+            <div layout="row">
+                <md-input-container class="md-block" flex=20>
+                    <label>Title</label>
+                    <md-select name="title" ng-model="data.title" required>
+                        <md-option value="MR">Mr</md-option>
+                        <md-option value="MS">Ms</md-option>
+                    </md-select>
+                </md-input-container>
+                <md-input-container class="md-block" flex=40>
+                    <label>Surname</label>
+                    <input ng-model="data.surname" required>
+                    <div ng-messages="data.surname.$error" role="alert">
+                        <div ng-message-exp="['required']">
+                            {{'error_surname' | translate}}
+                        </div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block" flex=40>
+                    <label>Given</label>
+                    <input ng-model="data.given" required>
+                    <div ng-messages="data.given.$error" role="alert">
+                        <div ng-message-exp="['required']">
+                            Your surname must be between 10 and 100 characters long and look like an e-mail address.
+                        </div>
+                    </div>
+                </md-input-container>
+            </div>
+            <div layout="row">
+                <md-input-container class="md-block " flex=20>
+                    <label>Date of Birth</label>
+                    <md-datepicker ng-model="data.dob " md-current-view="year " required> </md-datepicker>
+                </md-input-container>
+                <md-input-container class="md-block " flex=20>
+                    Age: {{ data.dob | Age }}
+                </md-input-container>
+                <md-input-container class="md-block " flex=20>
+                    <p>Gender</p>
+                    <md-radio-group name="gender " ng-model="data.gender " aria-required=" ">
+                        <md-radio-button value="Male ">Male</md-radio-button>
+                        <md-radio-button value="Female ">Female</md-radio-button>
+                    </md-radio-group>
+                </md-input-container>
+                <md-input-container class="md-block" flex=40>
+
+                    <p>Smoking Status</p>
+                    <md-radio-group ng-model="data.smoking" ng-init="data.smoking='S'" ng-disabled="true" ">
+                                <md-radio-button value="Y ">Yes</md-radio-button>
+                                <md-radio-button value="N ">No</md-radio-button>
+                                <md-radio-button value="S ">Standard</md-radio-button>
+                            </md-radio-group >                            
+                        </md-input-container>
+                    </div>
+                    <div layout-gt-xs="row ">
+                        <md-input-container class="md-block " flex=50>
+                            <label>Mobile (optional)</label>
+                            <md-icon>phone</md-icon><input ng-model="data.phone ">
+                        </md-input-container>
+                        <md-input-container class="md-block " flex=50>
+                            <label>Email (optional)</label>
+                            <md-icon>email</md-icon><input ng-model="data.email " type="email ">
+                        </md-input-container>
+                    </div>
+                </md-card-content>
+            </md-card><div layout="row " layout-align="end center ">
+
+            </div>
+                
+        </section>
