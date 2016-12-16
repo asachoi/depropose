@@ -17,16 +17,11 @@
                             <md-checkbox ng-checked="exists(item, selectedRiders)" ng-click="toggle(item,  selectedRiders)">
                                 {{getRiderSetting(item).ridername}} - {{getRiderSetting(item).term}}
                             </md-checkbox>
-                        </md-input-container>
-                        <md-input-container class="md-block" flex=20>
-                            <label>faceamount</label>
-                            <input  ng-model="getRiderObject(item).faceamount">
-                        </md-input-container>
-                        <md-input-container class="md-block" flex=20>
-                            <label>payorage</label>
-                            <input  ng-model="getRiderObject(item).payorage">
-                        </md-input-container> 
-                        {{getRiderObject(item)}}
+                        </md-input-container>                     
+                        
+                        <div ng-if="!getRiderSetting(item).ridertype" ng-include="'customizations/views/rider/default.html'" class="md-block" flex=80></div>
+                        <div ng-if="getRiderSetting(item).ridertype" ng-include="'customizations/views/rider/' + getRiderSetting(item).ridertype + '.html'" class="md-block" flex=80></div>
+ 
                     </div>
                 </md-card-content>
             </md-card>

@@ -1,7 +1,7 @@
 [
     {
         "ridercode": "AE885",
-        "ridername": "ADB",
+        "ridername": "ADB",        
         "issueagemin": "1",
         "issueagemax": "65",
         "payeragemin": "N/A",
@@ -9,6 +9,7 @@
         "term": "Until Attained Age 70",
         "premiumperiod": "5 Years",
         "defaultvalue": "100% Basic FA",
+       
         "faceamountmin": "50000",
         "faceamountmax": "Minimum of 100% Basic FA or:"
     },
@@ -28,6 +29,7 @@
     {
         "ridercode": "PE885",
         "ridername": "PB",
+         "ridertype": "payorage",
         "issueagemin": "0",
         "issueagemax": "15",
         "payeragemin": "18",
@@ -106,6 +108,7 @@
     {
         "ridercode": "PJ885",
         "ridername": "PB",
+         "ridertype": "payorage",
         "issueagemin": "0",
         "issueagemax": "15",
         "payeragemin": "18",

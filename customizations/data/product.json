@@ -1,15 +1,15 @@
 {
     "productgroups": [
         {
-            "productgroupname": "Legacy Protect",
+            "productgroupname": "Legacy Protect ",
             "products": [
                 {
-                    "productname": "Legacy Protect",
+                    "productname": "Legacy Protect ",
                     "productcode": "LP",
                     "customform": "LP",
                     "plans": [
                         {
-                            "planname": "MCBLLegacyProtect1005-Pay(Peso)",
+                            "planname": "MCBL Legacy Protect 1005-Pay(Peso)",
                             "planid": "RE100",
                             "payperiod": "5",
                             "minifaceamount": 200000,
@@ -25,7 +25,7 @@
                             ]
                         },
                         {
-                            "planname": "MCBLLegacyProtect100Prime5-Pay(Peso)",
+                            "planname": "MCBL Legacy Protect 100Prime5-Pay(Peso)",
                             "planid": "RE200",
                             "payperiod": "5",
                             "minifaceamount": 100000,
@@ -41,7 +41,7 @@
                             ]
                         },
                         {
-                            "planname": "MCBLLegacyProtect100GoldPackageA5-Pay(Peso)",
+                            "planname": "MCBL Legacy Protect 100GoldPackageA5-Pay(Peso)",
                             "planid": "RE300",
                             "payperiod": "5",
                             "minifaceamount": 100000,
@@ -57,7 +57,7 @@
                             ]
                         },
                         {
-                            "planname": "MCBLLegacyProtect100GoldPackageB5-Pay(Peso)",
+                            "planname": "MCBL Legacy Protect 100GoldPackageB5-Pay(Peso)",
                             "planid": "RE400",
                             "payperiod": "5",
                             "minifaceamount": 100000,
@@ -73,7 +73,7 @@
                             ]
                         },
                         {
-                            "planname": "MCBLLegacyProtect10010-Pay(Peso)",
+                            "planname": "MCBL Legacy Protect 10010-Pay(Peso)",
                             "planid": "RJ100",
                             "payperiod": "10",
                             "minifaceamount": 200000,
@@ -88,7 +88,7 @@
                             ]
                         },
                         {
-                            "planname": "MCBLLegacyProtect100Prime10-Pay(Peso)",
+                            "planname": "MCBL Legacy Protect 100Prime10-Pay(Peso)",
                             "planid": "RJ200",
                             "payperiod": "10",
                             "minifaceamount": 100000,
@@ -103,7 +103,7 @@
                             ]
                         },
                         {
-                            "planname": "MCBLLegacyProtect100GoldPackageA10-Pay(Peso)",
+                            "planname": "MCBL Legacy Protect 100GoldPackageA10-Pay(Peso)",
                             "planid": "RJ300",
                             "payperiod": "10",
                             "minifaceamount": 100000,
@@ -118,7 +118,7 @@
                             ]
                         },
                         {
-                            "planname": "MCBLLegacyProtect100GoldPackageB10-Pay(Peso)",
+                            "planname": "MCBL Legacy Protect 100GoldPackageB10-Pay(Peso)",
                             "planid": "RJ400",
                             "payperiod": "10",
                             "minifaceamount": 100000,
@@ -133,7 +133,7 @@
                             ]
                         },
                         {
-                            "planname": "MCBLLegacyProtect10015-Pay(Peso)",
+                            "planname": "MCBL Legacy Protect 10015-Pay(Peso)",
                             "planid": "RO100",
                             "payperiod": "15",
                             "minifaceamount": 200000,
@@ -149,7 +149,7 @@
                             ]
                         },
                         {
-                            "planname": "MCBLLegacyProtect100Prime15-Pay(Peso)",
+                            "planname": "MCBL Legacy Protect 100Prime15-Pay(Peso)",
                             "planid": "RO200",
                             "payperiod": "15",
                             "minifaceamount": 100000,
@@ -165,7 +165,7 @@
                             ]
                         },
                         {
-                            "planname": "MCBLLegacyProtect100GoldPackageA15-Pay(Peso)",
+                            "planname": "MCBL Legacy Protect 100GoldPackageA15-Pay(Peso)",
                             "planid": "RO300",
                             "payperiod": "15",
                             "minifaceamount": 100000,
@@ -181,7 +181,7 @@
                             ]
                         },
                         {
-                            "planname": "MCBLLegacyProtect100GoldPackageB15-Pay(Peso)",
+                            "planname": "MCBL Legacy Protect 100GoldPackageB15-Pay(Peso)",
                             "planid": "RO400",
                             "payperiod": "15",
                             "minifaceamount": 100000,
@@ -197,7 +197,7 @@
                             ]
                         },
                         {
-                            "planname": "MCBLLegacyProtect100Reg-Pay(Peso)",
+                            "planname": "MCBL Legacy Protect 100Reg-Pay(Peso)",
                             "planid": "RZ100",
                             "payperiod": "RegularPay",
                             "minifaceamount": 300000,
@@ -212,7 +212,7 @@
                             ]
                         },
                         {
-                            "planname": "MCBLLegacyProtect100PrimeReg-Pay(Peso)",
+                            "planname": "MCBL Legacy Protect 100PrimeReg-Pay(Peso)",
                             "planid": "RZ200",
                             "payperiod": "RegularPay",
                             "minifaceamount": 200000,
@@ -227,7 +227,7 @@
                             ]                            
                         },
                         {
-                            "planname": "MCBLLegacyProtect100GoldPackageAReg-Pay(Peso)",
+                            "planname": "MCBL Legacy Protect 100GoldPackageAReg-Pay(Peso)",
                             "planid": "RZ300",
                             "payperiod": "RegularPay",
                             "minifaceamount": 200000,
@@ -242,7 +242,7 @@
                             ]                
                         },
                         {
-                            "planname": "MCBLLegacyProtect100GoldPackageBReg-Pay(Peso)",
+                            "planname": "MCBL Legacy Protect 100GoldPackageBReg-Pay(Peso)",
                             "planid": "RZ400",
                             "payperiod": "RegularPay",
                             "minifaceamount": 200000,

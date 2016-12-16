@@ -55,6 +55,8 @@ mainApp.config(function ($stateProvider, $urlRouterProvider) {
                     $scope.baseObj = $rootScope.stateObj;
                     $scope.settingObj = $rootScope.settingObj;
 
+                    //$scope.settingObj.productFormStatus = productForm;
+
                     $scope.getProductGroupList = function () {
 
                         return productServices.getProductGroupList();

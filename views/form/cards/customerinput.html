@@ -43,7 +43,7 @@
                         <md-radio-button value="Female ">Female</md-radio-button>
                     </md-radio-group>
                 </md-input-container>
-                <md-input-container class="md-input-has-value" flex=40>
+                <md-input-container class="md-input-has-value" flex=20>
                     <p>Smoking Status</p>
                     <md-radio-group ng-model="data.smoking" ng-init="data.smoking='S'" ng-disabled="true">
                         <md-radio-button value="Y ">Yes</md-radio-button>
@@ -51,11 +51,11 @@
                         <md-radio-button value="S ">Standard</md-radio-button>
                     </md-radio-group >                            
                 </md-input-container>
-                <md-input-container class="md-block " flex=20>
+                <md-input-container class="md-block " flex=30>
                     <label>Date of Birth</label>
                     <md-datepicker ng-model="data.dob " md-current-view="year " required> </md-datepicker>
                 </md-input-container>
-                <md-input-container class="md-block " flex=20>
+                <md-input-container class="md-block " flex=30>
                     Age: {{ data.dob | Age }}
                 </md-input-container>                
             </div>

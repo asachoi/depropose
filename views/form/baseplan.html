@@ -3,6 +3,7 @@
     
     <customer-section data="baseObj.customers.insured"></customer-section>
     <!--form //-->
+    {{settingObj.productFormStatus}}
     <form name="productForm" ng-keyup="" ng-mouseup="" ng-init="changePlan();">
         <section>
             <md-card>
@@ -15,14 +16,14 @@
                     <div layout-gt-xs="row">
                         <md-input-container class="md-block" flex=20>
                             <label>Product</label>
-                            <md-select name="productid" ng-model="baseObj.product.productid">
+                            <md-select name="productid" ng-model="baseObj.product.productid" required>
                                 <md-option ng-repeat="n in getProductGroupList();" ng-value="n.productgroupname">
                                     {{n.productgroupname}}
                                 </md-option>
                             </md-select>
                         </md-input-container>
                         <md-input-container class="md-block" flex=80> <label>Plan</label>
-                            <md-select name="planid" ng-model="baseObj.product.planid" ng-change="changePlan();">
+                            <md-select name="planid" ng-model="baseObj.product.planid" ng-change="changePlan();" required>
                                 <md-option ng-repeat="n in getBaseProductPlans(baseObj.product.productid)" ng-value="n.plantype + '.' + n.planid">
                                     {{n.planname}}
                                 </md-option>
@@ -33,7 +34,7 @@
 
                     <div layout-gt-xs="row" ng-if="selectedPlanType.customform" ng-include="'customizations/views/baseplan/' + selectedPlanType.customform + '.html?cb=' +cachebuster">
                     </div>
-                    {{selectedPlan}}
+                   
                   <!--demo//-->
                 </md-card-content>
             </md-card>
