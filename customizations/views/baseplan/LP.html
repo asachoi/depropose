@@ -1,0 +1,21 @@
+<md-input-container class="md-block" flex=20>
+    <md-select name="currency" ng-model="baseObj.product.currency" ng-init="baseObj.product.currency=selectedPlan.currency;"
+        ng-disabled="true">
+        <md-option ng-value="selectedPlan.currency">{{selectedPlan.currency}}</md-option>
+    </md-select>
+</md-input-container>
+
+<md-input-container class="md-block" flex=40>
+    <label>{{'faceamount'|translate}}</label>
+    <input ng-model="baseObj.product.faceamount" type="number" min="{{selectedPlan.minifaceamount}}" max="{{selectedPlan.maxfaceamount}}">
+    </md-input>
+</md-input-container>
+
+<md-input-container class="md-block" flex=40>
+    <label>{{'payperiod'|translate}}</label>
+    <input ng-model="baseObj.product.payperiod" ng-value="selectedPlan.payperiod">
+</md-input-container>
+
+<!--
+{'planname':'MCBL Legacy Protect 100 5-Pay (Peso)','plancode':'RE100','payperiod':'5','minifaceamount':200000,'maxfaceamount':999999999,'currency':'PHP'},
+//-->

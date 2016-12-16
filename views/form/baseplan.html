@@ -30,21 +30,11 @@
                         </md-input-container>
                     </div>
                     <!--demo//-->
-                    <div layout-gt-xs="row">
-                        <md-input-container class="md-block">
-                            <md-select name="currency" ng-model="baseObj.product.currency" ng-init="baseObj.product.currency=selectedPlan.currency;"
-                                ng-disabled="true">
-                                <md-option ng-value="selectedPlan.currency">{{selectedPlan.currency}}</md-option>
-                            </md-select>
-                        </md-input-container>
-                        <md-input-container class="md-block" flex-gt-xs>
-                            <label>{{'premium'|translate}}</label>
-                            <input ng-model="baseObj.product.annualpremium">
-                            </md-input>
-                        </md-input-container>
+
+                    <div layout-gt-xs="row" ng-if="selectedPlanType.customform" ng-include="'customizations/views/baseplan/' + selectedPlanType.customform + '.html?cb=' +cachebuster">
                     </div>
-                    <div layout-gt-xs="row" ng-if="selectedPlanType.customform" ng-include="'customizations/views/baseplan/' + selectedPlanType.customform + '.html?bb=1'">
-                    </div>
+
+                    {{selectedPlan}}
                   <!--demo//-->
                 </md-card-content>
             </md-card>
