@@ -1,7 +1,7 @@
 <md-content class="md-padding">
     <!--panel session //-->
     
-    <customer-section data="baseObj.customers[0]"></customer-section>
+    <customer-section data="baseObj.customers.insured"></customer-section>
     <!--form //-->
     <form name="productForm" ng-keyup="" ng-mouseup="" ng-init="changePlan();">
         <section>
@@ -43,7 +43,7 @@
                             </md-input>
                         </md-input-container>
                     </div>
-                    <div layout-gt-xs="row" ng-if="selectedPlanType.customform" ng-include="'customizations/baseplan/' + selectedPlanType.customform + '.html?bb=1'">
+                    <div layout-gt-xs="row" ng-if="selectedPlanType.customform" ng-include="'customizations/views/baseplan/' + selectedPlanType.customform + '.html?bb=1'">
                     </div>
                   <!--demo//-->
                 </md-card-content>

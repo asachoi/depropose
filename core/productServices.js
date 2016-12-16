@@ -53,13 +53,7 @@ mainApp.service('productServices', function ($http, $rootScope, $filter) {
 
 
     this.loadProducts = function () {
-        var url = '/data/setting.txt';
-        $http.get(url).then(
-            function (resp) {
-
-            }
-        );
-
+ 
         var productMaster =
             {
                 products: [

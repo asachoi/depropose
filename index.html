@@ -44,21 +44,24 @@
     <script src="assets/libs/angular-material.min.js"></script>
     <script src="assets/libs/angular-ui-router.min.js"></script>
     <script src="assets/libs/angular-translate.min.js"></script>
+    <script src="assets/libs/jquery-3.1.1.min.js"></script>
     <script src="assets/libs/ngStorage.js"></script>
+    
 
     <script type="text/javascript">
         var cachebuster = Math.round(new Date().getTime() / 1000);
         document.write('<scr'+'ipt type="text/javascript" src="core/static.js?cb=' +cachebuster+'"></scr' + 'ipt>');
         document.write('<scr'+'ipt type="text/javascript" src="core/app.js?cb=' +cachebuster+'"></scr' + 'ipt>');
         document.write('<scr'+'ipt type="text/javascript" src="core/filters.js?cb=' +cachebuster+'"></scr' + 'ipt>');
-       
+        document.write('<scr'+'ipt type="text/javascript" src="core/config.js?cb=' +cachebuster+'"></scr' + 'ipt>');
         document.write('<scr'+'ipt type="text/javascript" src="core/route.js?cb=' +cachebuster+'"></scr' + 'ipt>');
-        document.write('<scr'+'ipt type="text/javascript" src="core/directives.js?cb=' +cachebuster+'"></scr' + 'ipt>');
-        document.write('<scr'+'ipt type="text/javascript" src="core/productServices.js?cb=' +cachebuster+'"></scr' + 'ipt>');
+        document.write('<scr'+'ipt type="text/javascript" src="core/directives.js?cb=' +cachebuster+'"></scr' + 'ipt>');                
         document.write('<scr'+'ipt type="text/javascript" src="core/commonServices.js?cb=' +cachebuster+'"></scr' + 'ipt>');
+        
+        document.write('<scr'+'ipt type="text/javascript" src="core/productServices.js?cb=' +cachebuster+'"></scr' + 'ipt>');
+        
 
-        document.write('<scr'+'ipt type="text/javascript" src="controllers/mainController.js?cb=' +cachebuster+'"></scr' + 'ipt>');         
-        document.write('<scr'+'ipt type="text/javascript" src="controllers/listController.js?cb=' +cachebuster+'"></scr' + 'ipt>');
+        document.write('<scr'+'ipt type="text/javascript" src="controllers/mainController.js?cb=' +cachebuster+'"></scr' + 'ipt>');
 
         document.write('<scr'+'ipt type="text/javascript" src="customizations/translate.js?cb=' +cachebuster+'"></scr' + 'ipt>');
         document.write('<scr'+'ipt type="text/javascript" src="customizations/route.js?cb=' +cachebuster+'"></scr' + 'ipt>');        

@@ -1,9 +1,5 @@
-mainApp.config(function ($mdIconProvider, $mdThemingProvider, $stateProvider, $urlRouterProvider) {
-    $mdThemingProvider.theme('default')
-        .primaryPalette('green')
-        .accentPalette('orange');
+mainApp.config(function ($stateProvider, $urlRouterProvider) {
 
-    $mdIconProvider.fontSet('md', 'material-icons');
 
     $urlRouterProvider.otherwise('/list');
 
